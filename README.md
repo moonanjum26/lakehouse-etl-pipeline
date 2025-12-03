@@ -139,7 +139,8 @@ FORMAT AS PARQUET;
 ✔ Idempotent warehouse loading
 ✔ Enterprise-level folder organization
 
-**📫 Contact**
+
+### **📫 Contact**
 Made with ❤️ by **Mahwish Anjum**  
 For feedback or collaboration, reach out via [LinkedIn](https://www.linkedin.com/in/mahwish-anjum-61a84347/).
 
