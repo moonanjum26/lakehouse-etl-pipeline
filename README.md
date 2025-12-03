@@ -75,19 +75,6 @@ To avoid duplicating rows in the warehouse:
 
 This is a standard pattern used in real S3 → Redshift ETL pipelines.
 
-## 🧠 Architecture Diagram
-
-S3 (Raw Layer)
-↓
-AWS Glue (PySpark ETL)
-↓ Incremental Load + SCD-1 Merge
-Iceberg Table (Processed / Silver Layer)
-↓
-Curated S3 (Gold Layer)
-↓
-Amazon Redshift Serverless
-(Incremental Idempotent COPY)
-
 ## 🧪 ETL Logic (Summary)
 
 ### **SCD-1 MERGE**
@@ -98,7 +85,7 @@ ON t.order_id = s.order_id
 WHEN MATCHED THEN UPDATE SET ...
 WHEN NOT MATCHED THEN INSERT ...
 
-**### 🧊 Iceberg Table Properties**
+### 🧊 **Iceberg Table Properties**
 
 Below table lists the Iceberg configurations used for SCD-1 upserts:
 
@@ -110,7 +97,7 @@ Below table lists the Iceberg configurations used for SCD-1 upserts:
 
 ---
 
-**### 💧 Watermark Logic (Incremental Ingestion)**
+### **💧 Watermark Logic (Incremental Ingestion)**
 
 The Glue ETL reads **only new data** using a date-based watermark:
 
