@@ -131,13 +131,14 @@ IAM_ROLE '<RoleARN>'
 FORMAT AS PARQUET;
 
 ###  🔹 **8. 🎯 What This Project Demonstrates**
-✔ Modern Lakehouse architecture
-✔ Incremental ingestion patterns
-✔ SCD-1 merge using Iceberg
-✔ Terraform IaC for end-to-end setup
-✔ Glue ETL best practices
-✔ Idempotent warehouse loading
-✔ Enterprise-level folder organization
+1. **Modern Lakehouse Architecture**
+2. **Incremental Ingestion Patterns**
+3. **SCD-1 Merge using Apache Iceberg**
+4. **Terraform IaC for End-to-End Setup**
+5. **AWS Glue ETL Best Practices**
+6. **Idempotent Warehouse Loading (Marker-Based Redshift COPY)**
+7. **Enterprise-Level Folder Organization**
+
 
 
 ### **📫 Contact**
