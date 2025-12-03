@@ -141,5 +141,6 @@ FORMAT AS PARQUET;
 
 **📫 Contact**
 Made with ❤️ by **Mahwish Anjum**  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mahwish%20Anjum-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/mahwish-anjum-61a84347/)
+For feedback or collaboration, reach out via [LinkedIn](https://www.linkedin.com/in/mahwish-anjum-61a84347/).
+
 
