@@ -1,4 +1,3 @@
-# glue_delta_catalog_etl.py
 import sys
 from awsglue.transforms import *
 from awsglue.utils import getResolvedOptions
@@ -330,5 +329,6 @@ if not table_exists:
 # spark.sql(f"SHOW TBLPROPERTIES {qualified_table}").show(truncate=False)
 
 # spark.table("glue_catalog.processed_database.processed_table").printSchema()
+
 
 job.commit()
