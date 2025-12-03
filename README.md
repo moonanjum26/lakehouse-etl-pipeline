@@ -142,7 +142,7 @@ FORMAT AS PARQUET;
 
 
 ### **📫 Contact**
-Made with ❤️ by **Mahwish Anjum**  
+Made by **Mahwish Anjum**  
 For feedback or collaboration, reach out via [LinkedIn](https://www.linkedin.com/in/mahwish-anjum-61a84347/).
 
 
