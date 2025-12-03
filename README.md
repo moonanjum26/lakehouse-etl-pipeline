@@ -107,7 +107,7 @@ Reads only:
 folder_date > max(processed_date in Iceberg)
 ```
 
-###  🔹 **6. 🛠️ How to Deploy**
+###  🔹 **7. 🛠️ How to Deploy**
 **1. Deploy Infrastructure**
 cd terraform/
 terraform init
@@ -125,12 +125,12 @@ SCD-1 merge
 Write to Iceberg
 Write curated layer
 
-### **4. Load Redshift**
+**4. Load Redshift**
 COPY table FROM 's3://curated-bucket/gold/'
 IAM_ROLE '<RoleARN>'
 FORMAT AS PARQUET;
 
-###  🔹 **7. 🎯 What This Project Demonstrates**
+###  🔹 **8. 🎯 What This Project Demonstrates**
 ✔ Modern Lakehouse architecture
 ✔ Incremental ingestion patterns
 ✔ SCD-1 merge using Iceberg
