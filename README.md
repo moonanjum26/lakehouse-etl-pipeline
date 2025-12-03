@@ -75,7 +75,7 @@ To avoid duplicating rows in the warehouse:
 
 This is a standard pattern used in real S3 → Redshift ETL pipelines.
 
-## 🧪 ETL Logic (Summary)
+### 🔹 **6. 🧪 ETL Logic (Summary)**
 
 ### **SCD-1 MERGE**
 ```sql
@@ -84,6 +84,7 @@ USING incoming s
 ON t.order_id = s.order_id
 WHEN MATCHED THEN UPDATE SET ...
 WHEN NOT MATCHED THEN INSERT ...
+```
 
 ### 🧊 **Iceberg Table Properties**
 
@@ -104,9 +105,10 @@ The Glue ETL reads **only new data** using a date-based watermark:
 ```text
 Reads only:
 folder_date > max(processed_date in Iceberg)
+```
 
-**###  🛠️ How to Deploy**
-** 1. Deploy Infrastructure**
+###  🔹 **6. 🛠️ How to Deploy**
+**1. Deploy Infrastructure**
 cd terraform/
 terraform init
 terraform apply
@@ -123,12 +125,12 @@ SCD-1 merge
 Write to Iceberg
 Write curated layer
 
-**4. Load Redshift**
+### **4. Load Redshift**
 COPY table FROM 's3://curated-bucket/gold/'
 IAM_ROLE '<RoleARN>'
 FORMAT AS PARQUET;
 
-**🎯 What This Project Demonstrates**
+###  🔹 **7. 🎯 What This Project Demonstrates**
 ✔ Modern Lakehouse architecture
 ✔ Incremental ingestion patterns
 ✔ SCD-1 merge using Iceberg
