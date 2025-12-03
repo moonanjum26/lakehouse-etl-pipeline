@@ -73,7 +73,7 @@ To avoid duplicating rows in the warehouse:
 - COPY command loads **only unprocessed curated files**  
 - The load is **repeatable, safe, and fault-tolerant**
 
-This is a standard pattern used in real S3 → Redshift ETL pipelines.
+---
 
 ### 🔹 **6. 🧪 ETL Logic (Summary)**
 
@@ -107,6 +107,8 @@ Reads only:
 folder_date > max(processed_date in Iceberg)
 ```
 
+---
+
 ###  🔹 **7. 🛠️ How to Deploy**
 **1. Deploy Infrastructure**
 cd terraform/
@@ -130,6 +132,8 @@ COPY table FROM 's3://curated-bucket/gold/'
 IAM_ROLE '<RoleARN>'
 FORMAT AS PARQUET;
 
+---
+
 ###  🔹 **8. 🎯 What This Project Demonstrates**
 1. **Modern Lakehouse Architecture**
 2. **Incremental Ingestion Patterns**
@@ -139,7 +143,7 @@ FORMAT AS PARQUET;
 6. **Idempotent Warehouse Loading (Marker-Based Redshift COPY)**
 7. **Enterprise-Level Folder Organization**
 
-
+---
 
 ### **📫 Contact**
 Made by **Mahwish Anjum**  
