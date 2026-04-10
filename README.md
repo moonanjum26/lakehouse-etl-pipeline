@@ -1,4 +1,4 @@
-# 🏗️ AWS Lakehouse ETL Pipeline using Glue, Apache Iceberg, S3 & Redshift (Fully Automated with Terraform)
+# AWS Lakehouse ETL Pipeline using Glue, Apache Iceberg, S3 & Redshift (Fully Automated with Terraform)
 
 This repository contains a **production-grade lakehouse data pipeline** built on AWS.  
 It demonstrates how modern data engineering teams design **incremental ETL pipelines** using:
