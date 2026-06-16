@@ -1,7 +1,3 @@
-## Architecture
-
-![Pipeline Architecture](docs/lakehouse_etl_architecture_v2.svg)
-
 # AWS Lakehouse ETL Pipeline using Glue, Apache Iceberg, S3 & Redshift (Fully Automated with Terraform)
 
 This repository contains a **production-grade lakehouse data pipeline** built on AWS.  
@@ -12,6 +8,10 @@ It demonstrates how modern data engineering teams design **incremental ETL pipel
 - **Amazon S3** as Bronze, Silver & Gold layers  
 - **Amazon Redshift Serverless** as the warehouse  
 - **Terraform** for complete infrastructure automation
+
+## Architecture
+
+![Pipeline Architecture](docs/lakehouse_etl_architecture_v2.svg)
 
 The pipeline ingests raw data from S3, performs **SCD-1 upserts** into Iceberg, creates a curated Gold layer,  
 and loads it incrementally into Redshift using an **idempotent COPY pattern**.
