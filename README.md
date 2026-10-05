@@ -146,11 +146,3 @@ FORMAT AS PARQUET;
 5. **AWS Glue ETL Best Practices**
 6. **Idempotent Warehouse Loading (Marker-Based Redshift COPY)**
 7. **Enterprise-Level Folder Organization**
-
----
-
-### **📫 Contact**
-Made by **Mahwish Anjum**  
-For feedback or collaboration, reach out via [LinkedIn](https://www.linkedin.com/in/mahwish-anjum-61a84347/).
-
-
