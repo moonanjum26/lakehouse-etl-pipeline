@@ -18,9 +18,9 @@ and loads it incrementally into Redshift using an **idempotent COPY pattern**.
 
 This is a **real-world lakehouse architecture** similar to what large-scale companies deploy in production.
 
-## 🚀 Key Capabilities
+## Key Capabilities
 
-### 🔹 **1. Automated Infrastructure-as-Code (Terraform)**
+### **1. Automated Infrastructure-as-Code (Terraform)**
 
 Terraform provisions the entire pipeline:
 
@@ -34,7 +34,7 @@ This ensures **fully reproducible, version-controlled infrastructure**.
 
 ---
 
-### 🔹 **2. Incremental Ingestion with Watermarking**
+### **2. Incremental Ingestion with Watermarking**
 
 Instead of scanning all S3 files, the Glue job:
 
@@ -42,11 +42,11 @@ Instead of scanning all S3 files, the Glue job:
 - Loads only files newer than the watermark  
 - Completely avoids reprocessing  
 
-💡 **Result → Low cost, faster job runtime, scalable processing**
+**Result → Low cost, faster job runtime, scalable processing**
 
 ---
 
-### 🔹 **3. SCD-1 Upserts via Apache Iceberg MERGE**
+### **3. SCD-1 Upserts via Apache Iceberg MERGE**
 
 The ETL job implements full **SCD-1 merge logic**:
 
@@ -59,7 +59,7 @@ This is exactly how **enterprise pipelines maintain clean, consistent dimension/
 
 ---
 
-### 🔹 **4. Curated (Gold) Layer Generation**
+### **4. Curated (Gold) Layer Generation**
 
 A clean, analytics-ready dataset is written into the curated bucket:
 
@@ -69,7 +69,7 @@ A clean, analytics-ready dataset is written into the curated bucket:
 
 ---
 
-### 🔹 **5. Idempotent Redshift Incremental Loading**
+### **5. Idempotent Redshift Incremental Loading**
 
 To avoid duplicating rows in the warehouse:
 
@@ -79,7 +79,7 @@ To avoid duplicating rows in the warehouse:
 
 ---
 
-### 🔹 **6. 🧪 ETL Logic (Summary)**
+### **6. ETL Logic (Summary)**
 
 ### **SCD-1 MERGE**
 ```sql
@@ -90,7 +90,7 @@ WHEN MATCHED THEN UPDATE SET ...
 WHEN NOT MATCHED THEN INSERT ...
 ```
 
-### 🧊 **Iceberg Table Properties**
+### **Iceberg Table Properties**
 
 Below table lists the Iceberg configurations used for SCD-1 upserts:
 
@@ -102,7 +102,7 @@ Below table lists the Iceberg configurations used for SCD-1 upserts:
 
 ---
 
-### **💧 Watermark Logic (Incremental Ingestion)**
+### **Watermark Logic (Incremental Ingestion)**
 
 The Glue ETL reads **only new data** using a date-based watermark:
 
@@ -113,7 +113,7 @@ folder_date > max(processed_date in Iceberg)
 
 ---
 
-###  🔹 **7. 🛠️ How to Deploy**
+###  **7.  How to Deploy**
 **1. Deploy Infrastructure**
 cd terraform/
 terraform init
@@ -138,7 +138,7 @@ FORMAT AS PARQUET;
 
 ---
 
-###  🔹 **8. 🎯 What This Project Demonstrates**
+###  **8.  What This Project Demonstrates**
 1. **Modern Lakehouse Architecture**
 2. **Incremental Ingestion Patterns**
 3. **SCD-1 Merge using Apache Iceberg**
